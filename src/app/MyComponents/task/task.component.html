@@ -1,0 +1,44 @@
+<div>
+    <h4 class="text-center">Task</h4>
+    <hr>
+    <div class="row">
+        <div class="col-md-4">
+            <button class="btn btn-sm btn-success mb-3 w-100 shadow-sm"
+            [ngClass]="{
+                'two': thisnumber === 2
+            }"
+             (click)="divide(2)">Number divisible by 2</button>
+            <button class="btn btn-sm btn-success mb-3 w-100 shadow-sm"
+            [ngClass]="{
+                'three': thisnumber === 3
+            }" (click)="divide(3)">Number divisible by 3</button>
+            <button class="btn btn-sm btn-success mb-3 w-100 shadow-sm"
+            [ngClass]="{
+                'five': thisnumber === 5
+            }" (click)="divide(5)">Number divisible by 5</button>
+            <button class="btn btn-sm btn-success mb-3 w-100 shadow-sm" 
+            [ngClass]="{
+                'ten': thisnumber === 10
+            }" (click)="divide(10)">Number divisible by 10</button>
+            <br>
+            <button class="btn btn-sm btn-danger mb-3 w-100" (click)="clear()">Clear</button>
+
+        </div>
+        <div class="col-md-8">
+            <span *ngFor="let item of numbers(50), index as i">
+                <span [ngStyle]="{backgroundColor:isApplied ? 'green':'white'}">
+                    <span *ngIf="(i+1)%thisnumber===0" class="p-1">
+                        {{i+1}}
+                    </span>
+                </span>
+                <span *ngIf="(i+1)%thisnumber !== 0" class="p-1">
+                    {{i+1}}
+                </span>
+
+            </span>
+        </div>
+
+    </div>
+    <br>
+    <h6 class="text-center text-success">Numbers highligted above are divible by {{thisnumber}}</h6>
+</div>

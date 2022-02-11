@@ -1,0 +1,32 @@
+<div class="p-3">
+    <h5 class="text-center">Data filtering for {{object_type_fired}}</h5>
+    <hr>
+    <span *ngIf="object_type_fired === 'Color'">
+        <span *ngFor="let item of object_list, index as i" >
+            <button *ngIf="item.type==='Color'"  class="btn btn-sm btn-success m-2">
+                {{item.name}}
+            </button>
+        </span>
+    </span>
+    <span *ngIf="object_type_fired === 'Fruit'">
+        <span *ngFor="let item of object_list, index as i">
+            <button *ngIf="item.type==='Fruit'"  class="btn btn-sm btn-success m-2">
+                {{item.name}}
+            </button>
+        </span>
+    </span>
+    <span *ngIf="object_type_fired === 'Animal'">
+        <span *ngFor="let item of object_list, index as i">
+            <button *ngIf="item.type==='Animal'"  class="btn btn-sm btn-success m-2">
+                {{item.name}}
+            </button>
+        </span>
+    </span>
+    <span *ngIf="object_type_fired==='default'">
+        <span *ngFor="let item of object_list, index as i">
+            <button  class="btn btn-sm btn-success m-2">
+                {{item.name}}
+            </button>
+        </span>
+    </span>
+</div>

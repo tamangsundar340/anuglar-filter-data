@@ -1,0 +1,20 @@
+.change_color_two{
+    background-color: red;
+    color: white;
+}
+.change_color_three{
+    background-color: green;
+    color: white;
+}
+.change_color_five{
+    background-color: blue;
+    color: white;
+}
+.change_color_ten{
+    background-color: yellow;
+    color: white;
+}
+.two, .three, .five, .ten{
+    background-color: beige;
+    color: black;
+}
